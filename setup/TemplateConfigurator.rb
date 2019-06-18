@@ -212,6 +212,11 @@ module Pod
       (ENV['GITHUB_ACCOUNT_NAME'] || github_user_name || `<GITHUB_ACCOUNT_NAME>`).strip
     end
 
+    def xcode_organization_name
+      xcode_organization_name = `defaults read -app Xcode IDETemplateOptions | grep organizationName | sed 's/^[^=]*=[[:space:]]*"\\{0,1\\}//' | sed 's/"\\{0,1\\}[[:space:]]*;[[:space:]]*$//'`.strip
+      return xcode_organization_name.empty? ? user_name : xcode_organization_name
+    end
+
     def year
       Time.now.year.to_s
     end
