@@ -217,6 +217,11 @@ module Pod
       return xcode_organization_name.empty? ? user_name : xcode_organization_name
     end
 
+    def xcode_bundle_identifier_prefix
+      xcode_bundle_identifier_prefix = `defaults read -app Xcode IDETemplateOptions | grep bundleIdentifierPrefix | sed 's/^[^=]*=[[:space:]]*"\\{0,1\\}//' | sed 's/"\\{0,1\\}[[:space:]]*;[[:space:]]*$//'`.strip
+      return xcode_bundle_identifier_prefix.empty? ? ("io.github." + github_account_name) : xcode_bundle_identifier_prefix
+    end
+
     def year
       Time.now.year.to_s
     end

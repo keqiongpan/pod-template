@@ -21,6 +21,7 @@ module Pod
       @string_replacements = {
         "PROJECT_OWNER" => @configurator.xcode_organization_name,
         "PROJECT_CREATOR" => @configurator.user_email,
+        "OWNER_IDENTIFIER" => @configurator.xcode_bundle_identifier_prefix,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
