@@ -20,6 +20,7 @@ module Pod
     def run
       @string_replacements = {
         "PROJECT_OWNER" => @configurator.xcode_organization_name,
+        "PROJECT_CREATOR" => @configurator.user_email,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
         "PROJECT" => @configurator.pod_name,
