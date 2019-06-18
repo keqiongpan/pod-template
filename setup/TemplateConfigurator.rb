@@ -129,6 +129,7 @@ module Pod
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
         text.gsub!("${REPO_NAME}", @pod_name.gsub('+', '-'))
+        text.gsub!("${GITHUB_ACCOUNT_NAME}", github_account_name)
         text.gsub!("${USER_NAME}", user_name)
         text.gsub!("${USER_EMAIL}", user_email)
         text.gsub!("${YEAR}", year)
@@ -194,7 +195,11 @@ module Pod
     #----------------------------------------#
 
     def user_name
-      (ENV['GIT_COMMITTER_NAME'] || github_user_name || `git config user.name` || `<GITHUB_USERNAME>` ).strip
+      (ENV['GIT_COMMITTER_NAME'] || `git config user.name` || github_user_name || `<GITHUB_USERNAME>` ).strip
+    end
+
+    def user_email
+      (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
     end
 
     def github_user_name
@@ -203,8 +208,8 @@ module Pod
       return is_valid ? nil : github_user_name
     end
 
-    def user_email
-      (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
+    def github_account_name
+      (ENV['GITHUB_ACCOUNT_NAME'] || github_user_name || `<GITHUB_ACCOUNT_NAME>`).strip
     end
 
     def year
