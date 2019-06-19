@@ -10,10 +10,20 @@
 		1B188A3222BA131700561366 /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B188A2822BA131700561366 /* PROJECT.framework */; };
 		1B188A3722BA131700561366 /* PROJECTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* PROJECTTests.m */; };
 		1B188A3922BA131700561366 /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF29CAB22BA24940046611D /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF29CB822BA27C80046611D /* PROJECTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* PROJECTTests.m */; };
+		1BF29CBA22BA27C80046611D /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B188A2822BA131700561366 /* PROJECT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1B188A3322BA131700561366 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B188A1F22BA131700561366 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B188A2722BA131700561366;
+			remoteInfo = PROJECT;
+		};
+		1BF29CB622BA27C80046611D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B188A1F22BA131700561366 /* Project object */;
 			proxyType = 1;
@@ -30,6 +40,8 @@
 		1B188A3622BA131700561366 /* PROJECTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJECTTests.m; sourceTree = "<group>"; };
 		1B188A3822BA131700561366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE4739922BA1B96009B3792 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		1BF29CB222BA24940046611D /* PROJECT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF29CBF22BA27C80046611D /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B188A3222BA131700561366 /* PROJECT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CAD22BA24940046611D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CB922BA27C80046611D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF29CBA22BA27C80046611D /* PROJECT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +93,8 @@
 			children = (
 				1B188A2822BA131700561366 /* PROJECT.framework */,
 				1B188A3122BA131700561366 /* PROJECTTests.xctest */,
+				1BF29CB222BA24940046611D /* PROJECT.framework */,
+				1BF29CBF22BA27C80046611D /* PROJECTTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +133,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B188A3922BA131700561366 /* PROJECT.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CAA22BA24940046611D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF29CAB22BA24940046611D /* PROJECT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +183,42 @@
 			productReference = 1B188A3122BA131700561366 /* PROJECTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1BF29CA922BA24940046611D /* PROJECT-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BF29CAF22BA24940046611D /* Build configuration list for PBXNativeTarget "PROJECT-macOS" */;
+			buildPhases = (
+				1BF29CAA22BA24940046611D /* Headers */,
+				1BF29CAC22BA24940046611D /* Sources */,
+				1BF29CAD22BA24940046611D /* Frameworks */,
+				1BF29CAE22BA24940046611D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PROJECT-macOS";
+			productName = PROJECT;
+			productReference = 1BF29CB222BA24940046611D /* PROJECT.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1BF29CB422BA27C80046611D /* PROJECTTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BF29CBC22BA27C80046611D /* Build configuration list for PBXNativeTarget "PROJECTTests-macOS" */;
+			buildPhases = (
+				1BF29CB722BA27C80046611D /* Sources */,
+				1BF29CB922BA27C80046611D /* Frameworks */,
+				1BF29CBB22BA27C80046611D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1BF29CB522BA27C80046611D /* PBXTargetDependency */,
+			);
+			name = "PROJECTTests-macOS";
+			productName = PROJECTTests;
+			productReference = 1BF29CBF22BA27C80046611D /* PROJECTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,6 +250,8 @@
 			targets = (
 				1B188A2722BA131700561366 /* PROJECT-iOS */,
 				1B188A3022BA131700561366 /* PROJECTTests-iOS */,
+				1BF29CA922BA24940046611D /* PROJECT-macOS */,
+				1BF29CB422BA27C80046611D /* PROJECTTests-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +265,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1B188A2F22BA131700561366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CAE22BA24940046611D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CBB22BA27C80046611D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,6 +303,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1BF29CAC22BA24940046611D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BF29CB722BA27C80046611D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BF29CB822BA27C80046611D /* PROJECTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -221,6 +325,11 @@
 			isa = PBXTargetDependency;
 			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
 			targetProxy = 1B188A3322BA131700561366 /* PBXContainerItemProxy */;
+		};
+		1BF29CB522BA27C80046611D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
+			targetProxy = 1BF29CB622BA27C80046611D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -257,7 +366,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -320,7 +428,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -348,7 +455,6 @@
 		1B188A3D22BA131700561366 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -372,7 +478,6 @@
 		1B188A3E22BA131700561366 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -431,6 +536,88 @@
 			};
 			name = Release;
 		};
+		1BF29CB022BA24940046611D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PROJECT/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PROJECT;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1BF29CB122BA24940046611D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PROJECT/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PROJECT;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1BF29CBD22BA27C80046611D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PROJECTTests/Prefix.pch;
+				INFOPLIST_FILE = PROJECTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PROJECTTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1BF29CBE22BA27C80046611D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PROJECTTests/Prefix.pch;
+				INFOPLIST_FILE = PROJECTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = PROJECTTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -457,6 +644,24 @@
 			buildConfigurations = (
 				1B188A4022BA131700561366 /* Debug */,
 				1B188A4122BA131700561366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BF29CAF22BA24940046611D /* Build configuration list for PBXNativeTarget "PROJECT-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF29CB022BA24940046611D /* Debug */,
+				1BF29CB122BA24940046611D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1BF29CBC22BA27C80046611D /* Build configuration list for PBXNativeTarget "PROJECTTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF29CBD22BA27C80046611D /* Debug */,
+				1BF29CBE22BA27C80046611D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
