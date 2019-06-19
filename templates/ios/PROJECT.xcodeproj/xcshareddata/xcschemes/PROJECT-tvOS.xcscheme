@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B188A2722BA131700561366"
+               BlueprintIdentifier = "1BF29CC122BA2AD00046611D"
                BuildableName = "PROJECT.framework"
-               BlueprintName = "PROJECT-iOS"
+               BlueprintName = "PROJECT-tvOS"
                ReferencedContainer = "container:PROJECT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,46 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B188A3022BA131700561366"
-               BuildableName = "PROJECTTests.xctest"
-               BlueprintName = "PROJECTTests-iOS"
-               ReferencedContainer = "container:PROJECT.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BF29CB422BA27C80046611D"
-               BuildableName = "PROJECTTests.xctest"
-               BlueprintName = "PROJECTTests-macOS"
-               ReferencedContainer = "container:PROJECT.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1BF29CCC22BA2B590046611D"
-               BuildableName = "PROJECTTests.xctest"
-               BlueprintName = "PROJECTTests-tvOS"
-               ReferencedContainer = "container:PROJECT.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B188A2722BA131700561366"
-            BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT-iOS"
-            ReferencedContainer = "container:PROJECT.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -84,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B188A2722BA131700561366"
+            BlueprintIdentifier = "1BF29CC122BA2AD00046611D"
             BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT-iOS"
+            BlueprintName = "PROJECT-tvOS"
             ReferencedContainer = "container:PROJECT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -102,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1B188A2722BA131700561366"
+            BlueprintIdentifier = "1BF29CC122BA2AD00046611D"
             BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT-iOS"
+            BlueprintName = "PROJECT-tvOS"
             ReferencedContainer = "container:PROJECT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
