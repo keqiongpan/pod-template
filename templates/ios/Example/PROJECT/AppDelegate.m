@@ -1,14 +1,14 @@
 //
-//  CPDAppDelegate.m
+//  AppDelegate.m
 //  PROJECT
 //
 //  Created by PROJECT_CREATOR on TODAYS_DATE.
 //  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
 
-#import "CPDAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation CPDAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -1,5 +1,5 @@
 //
-//  CPDViewController.h
+//  ViewController.h
 //  PROJECT
 //
 //  Created by PROJECT_CREATOR on TODAYS_DATE.
@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface CPDViewController : UIViewController
+@interface ViewController : UIViewController
 
 @end

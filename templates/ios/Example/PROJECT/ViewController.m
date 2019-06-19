@@ -1,18 +1,18 @@
 //
-//  CPDViewController.m
+//  ViewController.m
 //  PROJECT
 //
 //  Created by PROJECT_CREATOR on TODAYS_DATE.
 //  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
 
-#import "CPDViewController.h"
+#import "ViewController.h"
 
-@interface CPDViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation CPDViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
