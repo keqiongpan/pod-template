@@ -2,11 +2,11 @@
 //  PROJECT.h
 //  PROJECT
 //
-//  Created by keqiongpan@163.com on 2019/6/19.
-//  Copyright © 2019 PROJECT_OWNER. All rights reserved.
+//  Created by PROJECT_CREATOR on TODAYS_DATE.
+//  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for PROJECT.
 FOUNDATION_EXPORT double PROJECTVersionNumber;

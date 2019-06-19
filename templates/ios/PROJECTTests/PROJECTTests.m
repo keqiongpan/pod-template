@@ -2,8 +2,8 @@
 //  PROJECTTests.m
 //  PROJECTTests
 //
-//  Created by keqiongpan@163.com on 2019/6/19.
-//  Copyright © 2019 PROJECT_OWNER. All rights reserved.
+//  Created by PROJECT_CREATOR on TODAYS_DATE.
+//  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
