@@ -1,0 +1,15 @@
+//
+//  Prefix.pch
+//  PROJECTTests
+//
+//  Created by PROJECT_CREATOR on TODAYS_DATE.
+//  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
+//
+
+//  The contents of this file are implicitly included at the beginning of every test case source file.
+
+#ifdef __OBJC__
+
+${INCLUDED_PREFIXES}
+
+#endif

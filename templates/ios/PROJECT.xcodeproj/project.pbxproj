@@ -29,6 +29,7 @@
 		1B188A3122BA131700561366 /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B188A3622BA131700561366 /* PROJECTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJECTTests.m; sourceTree = "<group>"; };
 		1B188A3822BA131700561366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE4739922BA1B96009B3792 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		1B188A1E22BA131700561366 = {
 			isa = PBXGroup;
 			children = (
+				1BE4739822BA1A12009B3792 /* Podspec Metadata */,
 				1B188A2A22BA131700561366 /* PROJECT */,
 				1B188A3522BA131700561366 /* PROJECTTests */,
 				1B188A2922BA131700561366 /* Products */,
@@ -81,9 +83,17 @@
 			isa = PBXGroup;
 			children = (
 				1B188A3622BA131700561366 /* PROJECTTests.m */,
+				1BE4739922BA1B96009B3792 /* Prefix.pch */,
 				1B188A3822BA131700561366 /* Info.plist */,
 			);
 			path = PROJECTTests;
+			sourceTree = "<group>";
+		};
+		1BE4739822BA1A12009B3792 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +357,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.PROJECT";
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -370,7 +380,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.PROJECT";
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,13 +391,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PROJECTTests/Prefix.pch;
 				INFOPLIST_FILE = PROJECTTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.PROJECTTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -397,13 +409,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PROJECTTests/Prefix.pch;
 				INFOPLIST_FILE = PROJECTTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.PROJECTTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
