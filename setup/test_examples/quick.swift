@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import PROJECT
+import PROJECTExample
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
