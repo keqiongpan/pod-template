@@ -76,7 +76,7 @@ module Pod
         when :macos
           ConfigureMacOSSwift.perform(configurator: self)
         when :ios
-          framework = self.ask_with_answers("What language do you want to use?", ["Swift", "ObjC"]).to_sym
+          framework = self.ask_with_answers("What language do you want to use?", ["ObjC", "Swift"]).to_sym
           case framework
             when :swift
               ConfigureSwift.perform(configurator: self)
@@ -143,12 +143,12 @@ module Pod
     end
 
     def add_pods_to_podfile
-      podfile = File.read podfile_path
-      podfile_content = @pods_for_podfile.map do |pod|
-        "pod '" + pod + "'"
-      end.join("\n    ")
-      podfile.gsub!("${INCLUDED_PODS}", podfile_content)
-      File.open(podfile_path, "w") { |file| file.puts podfile }
+      # podfile = File.read podfile_path
+      # podfile_content = @pods_for_podfile.map do |pod|
+      #   "pod '" + pod + "'"
+      # end.join("\n    ")
+      # podfile.gsub!("${INCLUDED_PODS}", podfile_content)
+      # File.open(podfile_path, "w") { |file| file.puts podfile }
     end
 
     def add_line_to_pch line
@@ -156,7 +156,7 @@ module Pod
     end
 
     def customise_prefix
-      prefix_path = "Example/Tests/Tests-Prefix.pch"
+      prefix_path = pod_name + "Tests/Prefix.pch"
       return unless File.exists? prefix_path
 
       pch = File.read prefix_path
@@ -166,7 +166,7 @@ module Pod
 
     def set_test_framework(test_type, extension, folder)
       content_path = "setup/test_examples/" + test_type + "." + extension
-      tests_path = "templates/" + folder + "/Example/Tests/Tests." + extension
+      tests_path = "templates/" + folder + "/" + pod_name + "Tests/" + pod_name + "Tests." + extension
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
