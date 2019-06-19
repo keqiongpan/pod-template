@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B188A2722BA131700561366"
                BuildableName = "PROJECT.framework"
-               BlueprintName = "PROJECT"
+               BlueprintName = "PROJECT-iOS"
                ReferencedContainer = "container:PROJECT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B188A3022BA131700561366"
                BuildableName = "PROJECTTests.xctest"
-               BlueprintName = "PROJECTTests"
+               BlueprintName = "PROJECTTests-iOS"
                ReferencedContainer = "container:PROJECT.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B188A2722BA131700561366"
             BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT"
+            BlueprintName = "PROJECT-iOS"
             ReferencedContainer = "container:PROJECT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,7 +66,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B188A2722BA131700561366"
             BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT"
+            BlueprintName = "PROJECT-iOS"
             ReferencedContainer = "container:PROJECT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,7 +84,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B188A2722BA131700561366"
             BuildableName = "PROJECT.framework"
-            BlueprintName = "PROJECT"
+            BlueprintName = "PROJECT-iOS"
             ReferencedContainer = "container:PROJECT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -110,9 +110,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1B188A2722BA131700561366 /* PROJECT */ = {
+		1B188A2722BA131700561366 /* PROJECT-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B188A3C22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECT" */;
+			buildConfigurationList = 1B188A3C22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECT-iOS" */;
 			buildPhases = (
 				1B188A2322BA131700561366 /* Headers */,
 				1B188A2422BA131700561366 /* Sources */,
@@ -123,14 +123,14 @@
 			);
 			dependencies = (
 			);
-			name = PROJECT;
+			name = "PROJECT-iOS";
 			productName = PROJECT;
 			productReference = 1B188A2822BA131700561366 /* PROJECT.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1B188A3022BA131700561366 /* PROJECTTests */ = {
+		1B188A3022BA131700561366 /* PROJECTTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B188A3F22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECTTests" */;
+			buildConfigurationList = 1B188A3F22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECTTests-iOS" */;
 			buildPhases = (
 				1B188A2D22BA131700561366 /* Sources */,
 				1B188A2E22BA131700561366 /* Frameworks */,
@@ -141,7 +141,7 @@
 			dependencies = (
 				1B188A3422BA131700561366 /* PBXTargetDependency */,
 			);
-			name = PROJECTTests;
+			name = "PROJECTTests-iOS";
 			productName = PROJECTTests;
 			productReference = 1B188A3122BA131700561366 /* PROJECTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -175,8 +175,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B188A2722BA131700561366 /* PROJECT */,
-				1B188A3022BA131700561366 /* PROJECTTests */,
+				1B188A2722BA131700561366 /* PROJECT-iOS */,
+				1B188A3022BA131700561366 /* PROJECTTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		1B188A3422BA131700561366 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B188A2722BA131700561366 /* PROJECT */;
+			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
 			targetProxy = 1B188A3322BA131700561366 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -276,13 +276,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -331,13 +333,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -358,7 +362,8 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = PROJECT;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,7 +386,8 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = PROJECT;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -400,7 +406,8 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PROJECTTests;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -418,7 +425,8 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "OWNER_IDENTIFIER.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PROJECTTests;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -435,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B188A3C22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECT" */ = {
+		1B188A3C22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECT-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B188A3D22BA131700561366 /* Debug */,
@@ -444,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B188A3F22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECTTests" */ = {
+		1B188A3F22BA131700561366 /* Build configuration list for PBXNativeTarget "PROJECTTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B188A4022BA131700561366 /* Debug */,
