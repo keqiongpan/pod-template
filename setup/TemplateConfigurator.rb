@@ -145,6 +145,7 @@ module Pod
       end
 
       `git add Example/#{pod_name}Example.xcodeproj/project.pbxproj`
+      `git add Example/#{pod_name}Example.xcworkspace/contents.xcworkspacedata`
       `git commit -m "Initial commit"`
     end
 
@@ -230,14 +231,15 @@ module Pod
     end
 
     def rename_classes_folder
-      FileUtils.mv "Pod/*", @pod_name, :force => true
-      FileUtils.rmdir "Pod/"
+      `cp -a Pod/ #{pod_name}`
+      `rm -rf Pod/`
     end
 
     def reinitialize_git_repo
       `rm -rf .git`
       `git init`
       `git add -A`
+      `git rm --cached #{pod_name}/Classes/ReplaceMe.*`
     end
 
     def validate_user_details
