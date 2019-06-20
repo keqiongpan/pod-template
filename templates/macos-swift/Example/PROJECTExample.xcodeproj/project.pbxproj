@@ -97,9 +97,9 @@
 		ED83F67020348A760038D96B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CPD;
 				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 1020;
-				CLASSPREFIX = CPD;
 				ORGANIZATIONNAME = "PROJECT_OWNER";
 				TargetAttributes = {
 					ED83F67720348A760038D96B = {

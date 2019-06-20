@@ -130,8 +130,8 @@
 		6003F582195388D10070C39A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
 				CLASSPREFIX = CPD;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "PROJECT_OWNER";
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "PROJECTExample" */;

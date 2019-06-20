@@ -354,8 +354,8 @@
 		1B188A1F22BA131700561366 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
 				CLASSPREFIX = CPD;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "PROJECT_OWNER";
 				TargetAttributes = {
 					1B188A2722BA131700561366 = {
