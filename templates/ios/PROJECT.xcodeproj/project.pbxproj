@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1B188A3222BA131700561366 /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B188A2822BA131700561366 /* PROJECT.framework */; };
-		1B188A3722BA131700561366 /* PROJECTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* PROJECTTests.m */; };
+		1B188A3722BA131700561366 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* Tests.m */; };
 		1B188A3922BA131700561366 /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1BBD3A3522BB369500CD7BCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD3A3422BB369500CD7BCD /* XCTest.framework */; };
 		1BBD3A3722BB369D00CD7BCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD3A3622BB369D00CD7BCD /* XCTest.framework */; };
 		1BBD3A3922BB36A300CD7BCD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD3A3822BB36A300CD7BCD /* XCTest.framework */; };
 		1BF29CAB22BA24940046611D /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BF29CB822BA27C80046611D /* PROJECTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* PROJECTTests.m */; };
+		1BF29CB822BA27C80046611D /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* Tests.m */; };
 		1BF29CBA22BA27C80046611D /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B188A2822BA131700561366 /* PROJECT.framework */; };
 		1BF29CC322BA2AD00046611D /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BF29CD022BA2B590046611D /* PROJECTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* PROJECTTests.m */; };
+		1BF29CD022BA2B590046611D /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B188A3622BA131700561366 /* Tests.m */; };
 		1BF29CD222BA2B590046611D /* PROJECT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B188A2822BA131700561366 /* PROJECT.framework */; };
 		1BF29CDB22BA2C230046611D /* PROJECT.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B188A2B22BA131700561366 /* PROJECT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -51,7 +51,7 @@
 		1B188A2B22BA131700561366 /* PROJECT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECT.h; sourceTree = "<group>"; };
 		1B188A2C22BA131700561366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B188A3122BA131700561366 /* PROJECTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PROJECTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B188A3622BA131700561366 /* PROJECTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PROJECTTests.m; sourceTree = "<group>"; };
+		1B188A3622BA131700561366 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		1B188A3822BA131700561366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BBD3A3422BB369500CD7BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1BBD3A3622BB369D00CD7BCD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -129,8 +129,8 @@
 				1BE4739822BA1A12009B3792 /* Podspec Metadata */,
 				1B188A2A22BA131700561366 /* PROJECT */,
 				1B188A3522BA131700561366 /* PROJECTTests */,
-				1B188A2922BA131700561366 /* Products */,
 				1BBD3A3322BB369500CD7BCD /* Frameworks */,
+				1B188A2922BA131700561366 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,7 +160,7 @@
 		1B188A3522BA131700561366 /* PROJECTTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B188A3622BA131700561366 /* PROJECTTests.m */,
+				1B188A3622BA131700561366 /* Tests.m */,
 				1BE4739922BA1B96009B3792 /* Prefix.pch */,
 				1B188A3822BA131700561366 /* Info.plist */,
 			);
@@ -453,7 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B188A3722BA131700561366 /* PROJECTTests.m in Sources */,
+				1B188A3722BA131700561366 /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF29CB822BA27C80046611D /* PROJECTTests.m in Sources */,
+				1BF29CB822BA27C80046611D /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF29CD022BA2B590046611D /* PROJECTTests.m in Sources */,
+				1BF29CD022BA2B590046611D /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

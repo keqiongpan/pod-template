@@ -1,5 +1,5 @@
 //
-//  PROJECTTests.m
+//  Tests.m
 //  PROJECTTests
 //
 //  Created by PROJECT_CREATOR on TODAYS_DATE.
