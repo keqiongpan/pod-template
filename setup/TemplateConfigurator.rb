@@ -70,7 +70,7 @@ module Pod
     def ask_with_default(question, default_value)
       answer = nil
       loop do
-        puts "#{question} [" + default_value.underlined + "]"
+        print "\n#{question} [" + default_value.underlined + "]\n"
 
         @message_bank.show_prompt
         answer = gets.chomp
@@ -79,10 +79,10 @@ module Pod
         answer = answer.strip
         break if answer.length > 0
 
-        puts 'Your need input a valid value.'.red
+        print '\nYour need input a valid value.'.red
       end
       answer = answer.empty? ? nil : answer
-      puts (answer || default_value).yellow
+      print (answer || default_value).yellow
       answer
     end
 
