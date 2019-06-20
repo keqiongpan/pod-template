@@ -4,6 +4,4 @@ platform :ios, '8.0'
 
 target '${POD_NAME}Example' do
   pod '${POD_NAME}', :path => '../'
-
-  ${INCLUDED_PODS}
 end
