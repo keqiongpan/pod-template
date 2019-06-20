@@ -122,7 +122,7 @@ module Pod
       #     after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
       #     File.rename before, after
       #   end
-      end
+      # end
 
     end
 
