@@ -17,8 +17,10 @@ module Pod
       framework = configurator.ask_with_answers("Which testing frameworks will you use", ["Quick", "None"]).to_sym
       case framework
         when :quick
-          configurator.add_pod_to_podfile "Quick', '~> 1.2.0"
-          configurator.add_pod_to_podfile "Nimble', '~> 7.0.2"
+          configurator.add_pod_to_podfile "Quick"
+          configurator.add_pod_to_podfile "Nimble"
+          configurator.add_lib_to_cartfile "Quick/Quick"
+          configurator.add_lib_to_cartfile "Quick/Nimble"
           configurator.set_test_framework "quick", "swift", "swift"
 
         when :none
@@ -28,15 +30,17 @@ module Pod
       snapshots = configurator.ask_with_answers("Would you like to do view based testing", ["Yes", "No"]).to_sym
       case snapshots
         when :yes
-          configurator.add_pod_to_podfile "FBSnapshotTestCase' , '~> 2.1.4"
+          configurator.add_pod_to_podfile "FBSnapshotTestCase"
+          configurator.add_lib_to_cartfile "facebook/ios-snapshot-test-case"
 
           if keep_demo == :no
-              puts " Putting demo application back in, you cannot do view tests without a host application."
-              keep_demo = :yes
+            puts " Putting demo application back in, you cannot do view tests without a host application."
+            keep_demo = :yes
           end
 
           if framework == :quick
-              configurator.add_pod_to_podfile "Nimble-Snapshots' , '~> 6.3.0"
+            configurator.add_pod_to_podfile "Nimble-Snapshots"
+            configurator.add_lib_to_cartfile "ashfurrow/Nimble-Snapshots"
           end
       end
 

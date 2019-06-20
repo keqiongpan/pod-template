@@ -21,6 +21,9 @@ module Pod
           configurator.add_pod_to_podfile "Specta"
           configurator.add_pod_to_podfile "Expecta"
 
+          configurator.add_lib_to_cartfile "specta/specta"
+          configurator.add_lib_to_cartfile "specta/expecta"
+
           configurator.add_line_to_pch "@import Specta;"
           configurator.add_line_to_pch "@import Expecta;"
 
@@ -28,6 +31,7 @@ module Pod
 
         when :kiwi
           configurator.add_pod_to_podfile "Kiwi"
+          configurator.add_lib_to_cartfile "kiwi-bdd/Kiwi"
           configurator.add_line_to_pch "@import Kiwi;"
           configurator.set_test_framework("kiwi", "m", "ios")
 
@@ -39,16 +43,18 @@ module Pod
       case snapshots
         when :yes
           configurator.add_pod_to_podfile "FBSnapshotTestCase"
+          configurator.add_lib_to_cartfile "facebook/ios-snapshot-test-case"
           configurator.add_line_to_pch "@import FBSnapshotTestCase;"
 
           if keep_demo == :no
-              puts " Putting demo application back in, you cannot do view tests without a host application."
-              keep_demo = :yes
+            puts " Putting demo application back in, you cannot do view tests without a host application."
+            keep_demo = :yes
           end
 
           if framework == :specta
-              configurator.add_pod_to_podfile "Expecta+Snapshots"
-              configurator.add_line_to_pch "@import Expecta_Snapshots;"
+            configurator.add_pod_to_podfile "Expecta+Snapshots"
+            configurator.add_lib_to_cartfile "dblock/ios-snapshot-test-case-expecta"
+            configurator.add_line_to_pch "@import Expecta_Snapshots;"
           end
       end
 

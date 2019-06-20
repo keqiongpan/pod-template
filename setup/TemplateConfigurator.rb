@@ -4,7 +4,7 @@ require 'colored2'
 module Pod
   class TemplateConfigurator
 
-    attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email, :custom_user_name, :custom_user_email, :custom_github_account_name, :custom_xcode_organization_name, :custom_xcode_bundle_identifier_prefix
+    attr_reader :pod_name, :pods_for_podfile, :libs_for_cartfile, :prefixes, :test_example_file, :username, :email, :custom_user_name, :custom_user_email, :custom_github_account_name, :custom_xcode_organization_name, :custom_xcode_bundle_identifier_prefix
 
     def initialize(pod_name)
       @pod_name = pod_name
@@ -118,11 +118,13 @@ module Pod
       clean_template_files
       rename_template_files
       add_pods_to_podfile
+      add_libs_to_cartfile
       customise_prefix
       rename_classes_folder
       ensure_carthage_compatibility
       reinitialize_git_repo
       run_pod_install
+      run_carthage_update
 
       @message_bank.farewell_message
     end
@@ -134,7 +136,7 @@ module Pod
     end
 
     def run_pod_install
-      puts "\nRunning " + "pod install".magenta + " on your new library."
+      puts "\nRunning " + "pod install".magenta + " on your example."
       puts ""
 
       Dir.chdir("Example") do
@@ -143,6 +145,13 @@ module Pod
 
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
+    end
+
+    def run_carthage_update
+      puts "\nRunning " + "carthage update".magenta + " on your new library."
+      puts ""
+
+      system "carthage update"
     end
 
     def clean_template_files
@@ -177,6 +186,19 @@ module Pod
       # end.join("\n    ")
       # podfile.gsub!("${INCLUDED_PODS}", podfile_content)
       # File.open(podfile_path, "w") { |file| file.puts podfile }
+    end
+
+    def add_lib_to_cartfile libname
+      @libs_for_cartfile << libname
+    end
+
+    def add_libs_to_cartfile
+      cartfile = File.read cartfile_path
+      cartfile_content = @libs_for_cartfile.map do |lib|
+        "github '" + lib + "'"
+      end.join("\n")
+      cartfile.gsub!("${INCLUDED_LIBS}", cartfile_content)
+      File.open(cartfile_path, "w") { |file| file.puts cartfile }
     end
 
     def add_line_to_pch line
@@ -262,6 +284,10 @@ module Pod
 
     def podfile_path
       'Example/Podfile'
+    end
+
+    def cartfile_path
+      'Cartfile.private'
     end
 
     #----------------------------------------#
