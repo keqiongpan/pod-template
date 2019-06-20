@@ -81,7 +81,9 @@ module Pod
 
         puts 'Your need input a valid value.'.red
       end
-      answer.empty? ? nil : answer
+      answer = answer.empty? ? nil : answer
+      puts (answer || default_value).yellow
+      answer
     end
 
     def confirm_all_variable_values
