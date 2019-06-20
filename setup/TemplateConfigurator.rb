@@ -9,6 +9,7 @@ module Pod
     def initialize(pod_name)
       @pod_name = pod_name
       @pods_for_podfile = []
+      @libs_for_cartfile = []
       @prefixes = []
       @message_bank = MessageBank.new(self)
     end
