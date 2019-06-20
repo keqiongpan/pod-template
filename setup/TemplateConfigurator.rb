@@ -4,7 +4,7 @@ require 'colored2'
 module Pod
   class TemplateConfigurator
 
-    attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email
+    attr_reader :pod_name, :pods_for_podfile, :prefixes, :test_example_file, :username, :email, :custom_user_name, :custom_user_email, :custom_github_account_name, :custom_xcode_organization_name, :custom_xcode_bundle_identifier_prefix
 
     def initialize(pod_name)
       @pod_name = pod_name
@@ -67,8 +67,34 @@ module Pod
       answer
     end
 
+    def ask_with_default(question, default_value)
+      answer = nil
+      loop do
+        puts "#{question} [" + default_value.underlined + "]"
+
+        @message_bank.show_prompt
+        answer = gets.chomp
+
+        break if answer.length <= 0
+        answer = answer.strip
+        break if answer.length > 0
+
+        puts 'Your need input a valid value.'.red
+      end
+      answer.empty? ? nil : answer
+    end
+
+    def confirm_all_variable_values
+      @custom_user_name = self.ask_with_default("Do you want change the default value of `${USER_NAME}'?`", user_name)
+      @custom_user_email = self.ask_with_default("Do you want change the default value of `${USER_EMAIL}'?`", user_email)
+      @custom_github_account_name = self.ask_with_default("Do you want change the default value of `${GITHUB_ACCOUNT_NAME}'?`", github_account_name)
+      @custom_xcode_organization_name = self.ask_with_default("Do you want change the default value of `Organization Name'?`", xcode_organization_name)
+      @custom_xcode_bundle_identifier_prefix = self.ask_with_default("Do you want change the default value of `Bundle Identifier Prefix'?`", xcode_bundle_identifier_prefix)
+    end
+
     def run
       @message_bank.welcome_message
+      confirm_all_variable_values
 
       platform = self.ask_with_answers("What platform do you want to use?", ["iOS", "macOS"]).to_sym
 
@@ -195,11 +221,11 @@ module Pod
     #----------------------------------------#
 
     def user_name
-      (ENV['GIT_COMMITTER_NAME'] || `git config user.name` || github_user_name || `<GITHUB_USERNAME>` ).strip
+      (@custom_user_name || ENV['GIT_COMMITTER_NAME'] || `git config user.name` || github_user_name || `<GITHUB_USERNAME>` ).strip
     end
 
     def user_email
-      (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
+      (@custom_user_email || ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
     end
 
     def github_user_name
@@ -209,15 +235,17 @@ module Pod
     end
 
     def github_account_name
-      (ENV['GITHUB_ACCOUNT_NAME'] || github_user_name || `<GITHUB_ACCOUNT_NAME>`).strip
+      (@custom_github_account_name || ENV['GITHUB_ACCOUNT_NAME'] || github_user_name || `<GITHUB_ACCOUNT_NAME>`).strip
     end
 
     def xcode_organization_name
+      return @custom_xcode_organization_name if @custom_xcode_organization_name
       xcode_organization_name = `defaults read -app Xcode IDETemplateOptions | grep organizationName | sed 's/^[^=]*=[[:space:]]*"\\{0,1\\}//' | sed 's/"\\{0,1\\}[[:space:]]*;[[:space:]]*$//'`.strip
       return xcode_organization_name.empty? ? user_name : xcode_organization_name
     end
 
     def xcode_bundle_identifier_prefix
+      return @custom_xcode_bundle_identifier_prefix if custom_xcode_bundle_identifier_prefix
       xcode_bundle_identifier_prefix = `defaults read -app Xcode IDETemplateOptions | grep bundleIdentifierPrefix | sed 's/^[^=]*=[[:space:]]*"\\{0,1\\}//' | sed 's/"\\{0,1\\}[[:space:]]*;[[:space:]]*$//'`.strip
       return xcode_bundle_identifier_prefix.empty? ? ("io.github." + github_account_name) : xcode_bundle_identifier_prefix
     end
