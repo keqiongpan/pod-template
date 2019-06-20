@@ -102,7 +102,7 @@ module Pod
     #----------------------------------------#
 
     def ensure_carthage_compatibility
-      FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
+      # FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
     end
 
     def run_pod_install
