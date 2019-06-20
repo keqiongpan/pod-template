@@ -151,7 +151,8 @@
 		1B188A2A22BA131700561366 /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
-				1B188A2B22BA131700561366 /* PROJECT.h */,
+				1B75143822BBF39E006F7D56 /* Assets */,
+				1B75143A22BBF39E006F7D56 /* Classes */,
 				1B188A2C22BA131700561366 /* Info.plist */,
 			);
 			path = PROJECT;
@@ -165,6 +166,21 @@
 				1B188A3822BA131700561366 /* Info.plist */,
 			);
 			path = PROJECTTests;
+			sourceTree = "<group>";
+		};
+		1B75143822BBF39E006F7D56 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		1B75143A22BBF39E006F7D56 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B188A2B22BA131700561366 /* PROJECT.h */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		1BBD3A3322BB369500CD7BCD /* Frameworks */ = {

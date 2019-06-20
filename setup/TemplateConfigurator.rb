@@ -230,7 +230,8 @@ module Pod
     end
 
     def rename_classes_folder
-      FileUtils.mv "Pod", @pod_name
+      FileUtils.mv "Pod/*", @pod_name, :force => true
+      FileUtils.rmdir "Pod/"
     end
 
     def reinitialize_git_repo
