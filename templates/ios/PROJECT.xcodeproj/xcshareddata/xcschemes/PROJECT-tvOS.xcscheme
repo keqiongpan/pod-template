@@ -20,6 +20,20 @@
                ReferencedContainer = "container:PROJECT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BF29CCC22BA2B590046611D"
+               BuildableName = "PROJECTTests.xctest"
+               BlueprintName = "PROJECTTests-tvOS"
+               ReferencedContainer = "container:PROJECT.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BF29CCC22BA2B590046611D"
+               BuildableName = "PROJECTTests.xctest"
+               BlueprintName = "PROJECTTests-tvOS"
+               ReferencedContainer = "container:PROJECT.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BF29CC122BA2AD00046611D"
+            BuildableName = "PROJECT.framework"
+            BlueprintName = "PROJECT-tvOS"
+            ReferencedContainer = "container:PROJECT.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

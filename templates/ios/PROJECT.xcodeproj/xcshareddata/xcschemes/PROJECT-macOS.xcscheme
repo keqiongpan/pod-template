@@ -20,6 +20,20 @@
                ReferencedContainer = "container:PROJECT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BF29CB422BA27C80046611D"
+               BuildableName = "PROJECTTests.xctest"
+               BlueprintName = "PROJECTTests-macOS"
+               ReferencedContainer = "container:PROJECT.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1BF29CB422BA27C80046611D"
+               BuildableName = "PROJECTTests.xctest"
+               BlueprintName = "PROJECTTests-macOS"
+               ReferencedContainer = "container:PROJECT.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BF29CA922BA24940046611D"
+            BuildableName = "PROJECT.framework"
+            BlueprintName = "PROJECT-macOS"
+            ReferencedContainer = "container:PROJECT.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

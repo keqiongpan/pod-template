@@ -23,26 +23,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1B188A3322BA131700561366 /* PBXContainerItemProxy */ = {
+		1BBD3A3E22BB60E700CD7BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B188A1F22BA131700561366 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B188A2722BA131700561366;
-			remoteInfo = PROJECT;
+			remoteInfo = "PROJECT-iOS";
 		};
-		1BF29CB622BA27C80046611D /* PBXContainerItemProxy */ = {
+		1BBD3A4022BB611100CD7BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B188A1F22BA131700561366 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B188A2722BA131700561366;
-			remoteInfo = PROJECT;
+			remoteGlobalIDString = 1BF29CA922BA24940046611D;
+			remoteInfo = "PROJECT-macOS";
 		};
-		1BF29CCE22BA2B590046611D /* PBXContainerItemProxy */ = {
+		1BBD3A4222BB611A00CD7BCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1B188A1F22BA131700561366 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B188A2722BA131700561366;
-			remoteInfo = PROJECT;
+			remoteGlobalIDString = 1BF29CC122BA2AD00046611D;
+			remoteInfo = "PROJECT-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -251,7 +251,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1B188A3422BA131700561366 /* PBXTargetDependency */,
+				1BBD3A3F22BB60E700CD7BCD /* PBXTargetDependency */,
 			);
 			name = "PROJECTTests-iOS";
 			productName = PROJECTTests;
@@ -287,7 +287,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1BF29CB522BA27C80046611D /* PBXTargetDependency */,
+				1BBD3A4122BB611100CD7BCD /* PBXTargetDependency */,
 			);
 			name = "PROJECTTests-macOS";
 			productName = PROJECTTests;
@@ -323,7 +323,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1BF29CCD22BA2B590046611D /* PBXTargetDependency */,
+				1BBD3A4322BB611A00CD7BCD /* PBXTargetDependency */,
 			);
 			name = "PROJECTTests-tvOS";
 			productName = PROJECTTests;
@@ -496,20 +496,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1B188A3422BA131700561366 /* PBXTargetDependency */ = {
+		1BBD3A3F22BB60E700CD7BCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
-			targetProxy = 1B188A3322BA131700561366 /* PBXContainerItemProxy */;
+			targetProxy = 1BBD3A3E22BB60E700CD7BCD /* PBXContainerItemProxy */;
 		};
-		1BF29CB522BA27C80046611D /* PBXTargetDependency */ = {
+		1BBD3A4122BB611100CD7BCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
-			targetProxy = 1BF29CB622BA27C80046611D /* PBXContainerItemProxy */;
+			target = 1BF29CA922BA24940046611D /* PROJECT-macOS */;
+			targetProxy = 1BBD3A4022BB611100CD7BCD /* PBXContainerItemProxy */;
 		};
-		1BF29CCD22BA2B590046611D /* PBXTargetDependency */ = {
+		1BBD3A4322BB611A00CD7BCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B188A2722BA131700561366 /* PROJECT-iOS */;
-			targetProxy = 1BF29CCE22BA2B590046611D /* PBXContainerItemProxy */;
+			target = 1BF29CC122BA2AD00046611D /* PROJECT-tvOS */;
+			targetProxy = 1BBD3A4222BB611A00CD7BCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
