@@ -124,8 +124,8 @@ module Pod
       rename_classes_folder
       ensure_carthage_compatibility
       reinitialize_git_repo
-      run_pod_install
       run_carthage_update
+      run_pod_install
 
       @message_bank.farewell_message
     end
@@ -144,7 +144,7 @@ module Pod
         system "pod install"
       end
 
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add Example/#{pod_name}Example.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
 
@@ -196,7 +196,7 @@ module Pod
     def add_libs_to_cartfile
       cartfile = File.read cartfile_path
       cartfile_content = @libs_for_cartfile.map do |lib|
-        "github '" + lib + "'"
+        "github \"" + lib + "\""
       end.join("\n")
       cartfile.gsub!("${INCLUDED_LIBS}", cartfile_content)
       File.open(cartfile_path, "w") { |file| file.puts cartfile }
