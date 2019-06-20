@@ -93,6 +93,7 @@ module Pod
     def rename_files
 
       `find #{project_folder} | sort -r`.each_line do |oldname|
+          oldname = oldname.chomp
           newname = File.dirname(oldname) + '/' + File.basename(oldname).gsub('PROJECT', @configurator.pod_name).sub(/^CPD/, prefix)
           File.rename oldname, newname
       end
